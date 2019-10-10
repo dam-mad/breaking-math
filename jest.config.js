@@ -17,7 +17,7 @@ module.exports = {
     "!**/node_modules/**",
     "!**/vendor/**",
   ],
-  coverageDirectory: "coverage",
+  coverageDirectory: "<rootDir>/testing/coverage",
   coverageThreshold: {
     global: {
       statements: 0,
