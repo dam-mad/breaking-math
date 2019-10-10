@@ -11,6 +11,20 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: ``,
   },
+  collectCoverage: false,
+  collectCoverageFrom: [
+    "src/**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/vendor/**",
+  ],
+  coverageDirectory: "coverage",
+  coverageThreshold: {
+    global: {
+      statements: 0,
+      branches: 0,
+      functions: 0,
+    },
+  },
   testURL: `http://localhost`,
   setupFiles: [`<rootDir>/testing/config/loadershim.js`],
 }
