@@ -12,6 +12,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "jest --silent",
+    "test:update": "npm run test -- -u",
     "test:watch": "npm run test -- --watch",
     "test:debug": "npm run test -- --silent=false",
     "test:coverage": "npm run test -- --coverage"
@@ -51,9 +52,9 @@
     "src/**/*.{js,jsx,json}": [
       "prettier --write",
       "eslint --fix",
-      "git add"
-    ],
-    "src": ["npm run test"]
+      "git add",
+      "jest --bail --findRelatedTests"
+    ]
   },
   "husky": {
     "hooks": {
