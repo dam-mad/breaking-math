@@ -4,6 +4,5 @@
   "bracketSpacing": true,
   "arrowParens": "always",
   "trailingComma": "none",
-  "jsxBracketSameLine": true,
   "printWidth": 110
 }

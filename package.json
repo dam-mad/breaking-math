@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "lint": "eslint ./ --fix",
     "build": "gatsby build",
     "dev": "gatsby develop -o",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -49,6 +50,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json}": [
+      "eslint --fix",
       "prettier --write",
       "git add"
     ]
