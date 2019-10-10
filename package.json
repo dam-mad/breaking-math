@@ -30,6 +30,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@testing-library/react": "^9.3.0",
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.2.18",
     "identity-obj-proxy": "^3.0.0",
