@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "breaking-math",
+  "private": false,
+  "description": "Breaking Math's official podcast website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Mikayda Mills <mills.ma12@gmail.com> & Dallin Parker <dallin.r.parker@gmail.com>",
   "dependencies": {
     "gatsby": "^2.15.34",
     "gatsby-image": "^2.2.25",
@@ -27,7 +27,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop -o",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
