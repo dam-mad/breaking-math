@@ -1,9 +1,21 @@
 {
   "name": "breaking-math",
+  "license": "MIT",
   "private": false,
   "description": "Breaking Math's official podcast website",
   "version": "0.1.0",
   "author": "Mikayda Mills <mills.ma12@gmail.com> & Dallin Parker <dallin.r.parker@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop -o",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "jest --silent",
+    "test:watch": "npm run test -- --watch",
+    "test:debug": "npm run test -- --silent=false",
+    "test:coverage": "npm run test -- --coverage"
+  },
   "dependencies": {
     "gatsby": "^2.15.34",
     "gatsby-image": "^2.2.25",
@@ -13,31 +25,27 @@
     "gatsby-plugin-sharp": "^2.2.29",
     "gatsby-source-filesystem": "^2.1.31",
     "gatsby-transformer-sharp": "^2.2.21",
-    "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "@testing-library/react": "^9.3.0",
+    "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.18",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.10.2"
   },
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop -o",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/dam-mad/breaking-math"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/dam-mad/breaking-math/issues"
   }
 }
