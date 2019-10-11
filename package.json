@@ -18,7 +18,7 @@
     "test:coverage": "npm run test -- --coverage"
   },
   "dependencies": {
-    "gatsby": "^2.15.34",
+    "gatsby": "^2.15.35",
     "gatsby-image": "^2.2.25",
     "gatsby-plugin-manifest": "^2.2.21",
     "gatsby-plugin-offline": "^3.0.13",
