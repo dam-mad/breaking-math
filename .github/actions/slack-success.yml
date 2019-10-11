@@ -1,0 +1,9 @@
+- name: Slack Notification
+  uses: rtCamp/action-slack-notify@master
+  env:
+    SLACK_CHANNEL: breaking-math
+    SLACK_COLOR: "#32B853"
+    SLACK_MESSAGE: "New PR ready for review :rocket:"
+    SLACK_TITLE: Message
+    SLACK_USERNAME: MathBot
+    SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
