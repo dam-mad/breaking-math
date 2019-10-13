@@ -8,6 +8,15 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-plugin-sentry',
+      // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
+      options: {
+        dsn: 'https://d5edc8a14409479a8ac96bfac26599eb@sentry.io/1778294',
+        environment: process.env.NODE_ENV,
+        enabled: (() => ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)()
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
