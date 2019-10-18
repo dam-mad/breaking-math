@@ -18,14 +18,14 @@
     "test:coverage": "npm run test -- --coverage"
   },
   "dependencies": {
-    "gatsby": "^2.15.35",
+    "gatsby": "^2.16.4",
     "gatsby-image": "^2.2.27",
     "gatsby-plugin-manifest": "^2.2.21",
     "gatsby-plugin-offline": "^3.0.14",
     "gatsby-plugin-react-helmet": "^3.1.11",
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.2.29",
-    "gatsby-plugin-styled-components": "^3.1.9",
+    "gatsby-plugin-styled-components": "^3.1.11",
     "gatsby-source-filesystem": "^2.1.31",
     "gatsby-transformer-sharp": "^2.2.23",
     "react": "^16.10.2",
