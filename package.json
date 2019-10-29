@@ -15,7 +15,8 @@
     "test:update": "npm run test -- -u",
     "test:watch": "npm run test -- --watch",
     "test:debug": "npm run test -- --silent=false",
-    "test:coverage": "npm run test -- --coverage"
+    "test:coverage": "npm run test -- --coverage",
+    "deploy:prod": "firebase deploy"
   },
   "dependencies": {
     "gatsby": "^2.17.6",
