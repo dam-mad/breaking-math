@@ -5,6 +5,7 @@ module.exports = {
     author: '@kdabug & @dallin_r'
   },
   plugins: [
+    'gatsby-plugin-preact',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
@@ -36,7 +37,15 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        mode: 'static',
+        production: true,
+        openAnalyzer: process.env.NODE_ENV !== 'production',
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
