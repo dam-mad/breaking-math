@@ -1,0 +1,21 @@
+name: Breaking Math CI (TEST)
+on: pull_request
+
+jobs:
+  build:
+    name: Install Dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v1
+
+      - name: NVM Node LTS version
+        uses: dcodeIO/setup-node-nvm@master
+        with:
+          node-version: lts/*
+
+      - name: run tests
+        run: |
+          npm ci &&
+          npm run test

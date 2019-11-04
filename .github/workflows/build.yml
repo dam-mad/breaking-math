@@ -1,0 +1,27 @@
+name: Breaking Math CI (BUILD)
+on: pull_request
+
+jobs:
+  build:
+    name: Install Dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v1
+
+      - name: NVM Node LTS version
+        uses: dcodeIO/setup-node-nvm@master
+        with:
+          node-version: lts/*
+
+      - name: run build
+        run: |
+          npm ci &&
+          npm run build --if-present
+
+      - name: Archive Prod Build
+        uses: actions/upload-artifact@master
+        with:
+          name: public
+          path: public
