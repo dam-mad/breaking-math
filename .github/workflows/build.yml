@@ -25,6 +25,20 @@ jobs:
           name: public
           path: public
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v1
+
+      - name: Download Prod Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: public
+          path: public
+
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
