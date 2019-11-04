@@ -1,4 +1,4 @@
-name: Breaking Math CI (BUILD)
+name: Breaking Math CI
 on: pull_request
 
 jobs:
@@ -24,3 +24,10 @@ jobs:
         with:
           name: public
           path: public
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --token $FIREBASE_TOKEN
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

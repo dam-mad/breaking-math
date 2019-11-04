@@ -1,8 +1,8 @@
-name: Breaking Math CI (TEST)
+name: Breaking Math CI
 on: pull_request
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
