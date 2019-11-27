@@ -1,0 +1,40 @@
+name: Install - Build - Unit Tests
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v1
+
+      - name: NVM Node LTS version
+        uses: dcodeIO/setup-node-nvm@master
+        with:
+          node-version: lts/*
+
+      - name: run build
+        run: |
+          npm ci && 
+          npm run build --if-present
+
+      - name: Archive Prod Build
+        if: success()
+
+        uses: actions/upload-artifact@master
+        with:
+          name: public
+          path: public
+
+      - name: run tests
+        run: npm run test
+
+      - name: Deploy to Firebase Staging
+        if: success()
+
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:staging --token $FIREBASE_TOKEN
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "breaking-math"
+  },
+  "targets": {
+    "breaking-math": {
+      "hosting": {
+        "prod": [
+          "breaking-math"
+        ],
+        "staging": [
+          "staging-breaking-math"
+        ]
+      }
+    }
+  }
+}
