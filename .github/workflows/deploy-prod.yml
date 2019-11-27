@@ -1,0 +1,23 @@
+name: Deploy-Prod
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Prod Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: public
+          path: public
+
+      - name: Deploy to Firebase Production
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:prod --token $FIREBASE_TOKEN
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
