@@ -9,13 +9,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download Prod Artifact
-        uses: actions/download-artifact@master
+      - name: Checkout Branch
+        uses: actions/checkout@master
+
+      - name: NVM Node LTS version
+        uses: dcodeIO/setup-node-nvm@master
         with:
-          name: public
-          path: public
+          node-version: lts/*
+
+      - name: run build
+        run: |
+          npm ci && 
+          npm run build --if-present
 
       - name: Deploy to Firebase Production
+        if: success()
+
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting:prod --token $FIREBASE_TOKEN
