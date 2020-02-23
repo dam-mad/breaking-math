@@ -9,6 +9,12 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-source-anchor',
+      options: {
+        rss: 'https://anchor.fm/s/7a32d64/podcast/rss'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-sentry',
       // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
       options: {
