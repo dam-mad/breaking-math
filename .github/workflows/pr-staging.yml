@@ -27,8 +27,8 @@ jobs:
       #     name: public
       #     path: public
 
-      - name: run tests
-        run: npm run test
+      # - name: run tests
+      #   run: npm run test
 
       - name: Deploy to Firebase Staging
         if: success()
