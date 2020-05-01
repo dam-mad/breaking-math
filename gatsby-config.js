@@ -8,6 +8,7 @@ module.exports = {
     'gatsby-plugin-preact',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-source-anchor',
       options: {
