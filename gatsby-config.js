@@ -16,15 +16,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-sentry',
-      // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
-      options: {
-        dsn: 'https://d5edc8a14409479a8ac96bfac26599eb@sentry.io/1778294',
-        environment: process.env.NODE_ENV,
-        enabled: (() => ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)()
-      }
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
@@ -50,9 +41,9 @@ module.exports = {
       options: {
         mode: 'static',
         production: true,
-        openAnalyzer: process.env.NODE_ENV !== 'production',
-      },
-    },
+        openAnalyzer: process.env.NODE_ENV !== 'production'
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
