@@ -5,30 +5,14 @@ import Layout from '../components/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
 import ErrorBoundary from '../components/ErrorBoundary';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useFetchEpisodes } from '../hooks/commands/episodes';
+
+// #20232a good dark gray color
 
 const IndexPage = () => {
-  const { allAnchorEpisode } = useStaticQuery(graphql`
-    query {
-      allAnchorEpisode {
-        edges {
-          node {
-            content
-            contentSnippet
-            creator
-            enclosure {
-              length
-              type
-              url
-            }
-            dc_creator
-            id
-          }
-        }
-      }
-    }
-  `);
-  console.log('allAnchorEpisode: ', allAnchorEpisode);
+  // const { allAnchorEpisode } = useStaticQuery(allEpisodes);
+  const all = useFetchEpisodes();
+  console.log('dallin: ', all);
   return (
     <ErrorBoundary>
       <Layout>
