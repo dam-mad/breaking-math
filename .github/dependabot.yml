@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  ignore:
+  - dependency-name: gatsby-plugin-sharp
+    versions:
+    - 2.13.3
+    - 2.13.4
+    - 2.14.0
+    - 2.14.1
+    - 2.14.2
